@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        season: ['var(--font-season-mix)'],
+        sans: ['var(--font-sans)'],
+        mono: ['var(--font-mono)'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
