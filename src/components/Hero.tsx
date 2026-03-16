@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Active Startups", value: "8" },
-  { label: "Industries", value: "6" },
+  { label: "Active Startups", value: "9" },
+  { label: "Industries", value: "7" },
   { label: "Combined Revenue", value: "₹45L+" },
 ];
 
