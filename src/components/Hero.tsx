@@ -8,7 +8,7 @@ const stats = [
 
 const Hero = () => {
   return (
-    <section className="min-h-[85svh] flex flex-col justify-end border-b border-border px-6 pb-16 pt-32 md:px-12 lg:px-20">
+    <section className="flex flex-col border-b border-border px-6 pb-16 pt-24 md:px-12 lg:px-20">
       <div className="max-w-[1400px] mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

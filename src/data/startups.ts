@@ -8,7 +8,7 @@ export interface Startup {
   socials: string[];
   website: string | null;
   description?: string;
-  founderPhotos: string[];
+  founderNames: string[];
   logo?: string;
   teamMembers?: { name: string; department: string }[];
 }
@@ -30,7 +30,7 @@ export const startups: Startup[] = [
       "https://x.com/denivs_official",
     ],
     website: "https://denivs.com",
-    founderPhotos: [driveThumb("1bO1c4420lEIoQR6Yl7Y9M9qPMuCQmcJu")],
+    founderNames: [],
     logo: driveThumb("1HCSMhqkevoTIxxd06z_oYAA-tyKoTF-9"),
   },
   {
@@ -42,11 +42,10 @@ export const startups: Startup[] = [
     foundingYear: "2023",
     socials: ["https://www.instagram.com/reddy_arts_media/"],
     website: "https://reddyartsmedia.com",
-    founderPhotos: [driveThumb("1DGRi_62Kse8wJlaKKBa5mn17jd16bSgg")],
+    founderNames: ["Nakul Reddy"],
     logo: driveThumb("1A81sNbGsfqy9R8-4J_m3Ymd_amfx2j2i"),
     teamMembers: [
-      { name: "Nakul Reddy", department: "R&A" },
-      { name: "Aryan Surve", department: "Mechanical" },
+      { name: "Nakul Reddy", department: "Robotics & Automation" },
     ],
   },
   {
@@ -59,12 +58,13 @@ export const startups: Startup[] = [
     foundingYear: "2023",
     socials: [],
     website: null,
-    founderPhotos: [driveThumb("1zPzNTF3qR7hz9fudIkZZoIwCGAqu8fIu")],
+    founderNames: ["Atharva Dinde", "Jabibullah Yamakanamardi", "Riya Shinde", "Smita Jagtap"],
     logo: driveThumb("1X40GnfM6anSBrXnlGtkK_ItyrI_JuAz3"),
     teamMembers: [
-      { name: "Jaysing Ingle", department: "E&TC" },
       { name: "Atharva Dinde", department: "Robotics & Automation" },
       { name: "Jabibullah Yamakanamardi", department: "Robotics & Automation" },
+      { name: "Riya Shinde", department: "Robotics & Automation" },
+      { name: "Smita Jagtap", department: "Robotics & Automation" },
     ],
   },
   {
@@ -76,16 +76,17 @@ export const startups: Startup[] = [
     foundingYear: "2025",
     socials: [],
     website: "https://www.eqvisor.in",
-    founderPhotos: [
-      driveThumb("1YOEvIm668TSBJK9_AmvlYExtW4uUq-qR"),
-      driveThumb("19ERQTf1lZ2Jaxvjgif9SZ0Uq2ZmvusK5"),
-    ],
+    founderNames: ["Austin Loyd", "Aayush Joshi", "Priyanshuraj Sharma", "Shravan Bhoyar", "Hemant Pawar", "Om Salunkhe", "Sankalp Panchbhai", "Parth Kulkarni", "Anvi Vilayankar", "Sunny Borate"],
     logo: driveThumb("1pNdK5-vVdSBwHrXK1NrTGRScIziMF2bK"),
     teamMembers: [
+      { name: "Austin Loyd", department: "E&TC" },
+      { name: "Aayush Joshi", department: "E&TC" },
+      { name: "Priyanshuraj Sharma", department: "E&TC" },
+      { name: "Shravan Bhoyar", department: "E&TC" },
       { name: "Hemant Pawar", department: "IT" },
       { name: "Om Salunkhe", department: "CS" },
       { name: "Sankalp Panchbhai", department: "IT" },
-      { name: "Parth Kulkarni", department: "AI&DS" },
+      { name: "Parth Kulkarni", department: "AI&DS IEMR" },
       { name: "Anvi Vilayankar", department: "DYPCOP" },
       { name: "Sunny Borate", department: "CS" },
     ],
@@ -100,16 +101,12 @@ export const startups: Startup[] = [
     foundingYear: "2023",
     socials: ["https://www.linkedin.com/company/elenco-corporation/"],
     website: "https://www.elencocorporation.com",
-    founderPhotos: [
-      driveThumb("1f4jzsMLxjCLyOfYT9sqIWT1BaKoFD_Gu"),
-      driveThumb("1oocbKbWsbjFGn9dJASt9dmi_jlhn829Y"),
-      driveThumb("1RXu0T32ZzSBYhK_8_MNOvHDiqDwo5rSt"),
-    ],
+    founderNames: ["Abhishek Nandimath", "Atharva Mathpati", "Shreyansh Bhalgat"],
     logo: driveThumb("1331ljiGS-SYtXjcugHt8AWkSRlMw5YO-"),
     teamMembers: [
+      { name: "Abhishek Nandimath", department: "AI&DS" },
       { name: "Atharva Mathpati", department: "AI&DS" },
       { name: "Shreyansh Bhalgat", department: "AI&DS" },
-      { name: "Himanshu Mahajan", department: "AI&DS" },
     ],
   },
   {
@@ -123,10 +120,10 @@ export const startups: Startup[] = [
       "https://www.linkedin.com/company/ramaastra-aerospace-and-defence-pvt-ltd/",
     ],
     website: "https://www.ramaastra.com",
-    founderPhotos: [driveThumb("1yevFCBg4_tsU7Ty0oYUcmx5csvLkWzhl")],
+    founderNames: ["Shreyash Vikhe"],
     logo: driveThumb("16Fb8lX9mWECWyqkPh5ugH0JxghHlU5JQ"),
     teamMembers: [
-      { name: "Shreyash Vikhe", department: "R&A" },
+      { name: "Shreyash Vikhe", department: "Robotics & Automation" },
     ],
   },
   {
@@ -140,11 +137,10 @@ export const startups: Startup[] = [
     website: "https://www.agri-rana.in",
     description:
       "GSM and IoT-based farm automation devices enabling remote control of irrigation systems, real-time alerts, and data-driven farming decisions.",
-    founderPhotos: [driveThumb("12slLoDHvmB7rpp_mAMRWrPwvYXmG_bvz")],
+    founderNames: ["Jaysing Ingle"],
     logo: driveThumb("1RQF0NrmKXnUVPIZY_5k7xmRnY8Q7JfWO"),
     teamMembers: [
-      { name: "Nilanjan Paul", department: "AI&DS" },
-      { name: "Omkar Mane", department: "IT" },
+      { name: "Jaysing Ingle", department: "E&TC" },
     ],
   },
   {
@@ -158,11 +154,7 @@ export const startups: Startup[] = [
     website: null,
     description:
       "AI-powered agricultural technology helping farmers with crop monitoring and guidance in their own language.",
-    founderPhotos: [
-      driveThumb("1xvxDSzHk68fifOfDWsW9mOLumnEFMS2o"),
-      driveThumb("1cLIzQBuVLwGK5ro6BW1p0VhX3P9VFhLc"),
-      driveThumb("1zpLuXXC3OraVEyBXNsDDvEILjPj6g199"),
-    ],
+    founderNames: [],
     logo: driveThumb("1yciXQP4yTmwyLYzEeUUbpqdFNbiGEr4S"),
   },
   {
@@ -176,8 +168,11 @@ export const startups: Startup[] = [
     website: "https://warmwrite.com",
     description:
       "A platform focused on warm, personalized written communication and content creation.",
-    founderPhotos: [driveThumb("1nE12eYaVNqqidVAmR1bOyfVoORGvG7y8")],
+    founderNames: ["Pranav Patil"],
     logo: driveThumb("1H3Aq6Saay5HDRLHOREjbVU6cGV5QzmLg"),
+    teamMembers: [
+      { name: "Pranav Patil", department: "" },
+    ],
   },
   // --- Startups from Incubation Hub Status Report ---
   {
@@ -191,7 +186,7 @@ export const startups: Startup[] = [
     website: null,
     description:
       "A multidisciplinary tech venture spanning AI, robotics, and IT with a 14-member founding team.",
-    founderPhotos: [],
+    founderNames: ["Himanshu Mahajan", "Rudrakasha Vajire", "Harshal Chavan", "Vedant Bhavsar", "Aditya Neje", "Diksha Kapsee", "Prajwal Pachkhande", "Sarthak Shinde", "Pragati Kamble", "Chaitanya Kelkar", "Aryan Pandey", "Shreya Jejurkar", "Aditya Gawali", "Yash Dongare"],
     teamMembers: [
       { name: "Himanshu Mahajan", department: "AI&DS" },
       { name: "Rudrakasha Vajire", department: "AI&DS" },
@@ -219,11 +214,13 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "Innovative tech solution in the AI and data science space.",
-    founderPhotos: [],
+    founderNames: ["Omkar Biloor", "Anubhav Sharma", "Janhavi Dahatonde", "Nilanjan Paul", "Omkar Mane"],
     teamMembers: [
       { name: "Omkar Biloor", department: "IT" },
       { name: "Anubhav Sharma", department: "AI&DS" },
       { name: "Janhavi Dahatonde", department: "IT" },
+      { name: "Nilanjan Paul", department: "AI&DS" },
+      { name: "Omkar Mane", department: "IT" },
     ],
   },
   {
@@ -236,10 +233,9 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "A networking and collaboration platform for students and professionals.",
-    founderPhotos: [],
+    founderNames: ["Tejveer Singh"],
     teamMembers: [
       { name: "Tejveer Singh", department: "IT" },
-      { name: "Harshal Rudra", department: "Computer" },
     ],
   },
   {
@@ -252,8 +248,9 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "Technology lab focused on computer science and robotics innovation.",
-    founderPhotos: [],
+    founderNames: ["Harshal Rudra", "Pratik Aman", "Nishant Kumar"],
     teamMembers: [
+      { name: "Harshal Rudra", department: "Computer" },
       { name: "Pratik Aman", department: "Computer" },
       { name: "Nishant Kumar", department: "Robotics & Automation" },
     ],
@@ -268,14 +265,9 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "A student accommodation and roommate matching platform that has generated over ₹13.5 Lakhs in revenue.",
-    founderPhotos: [],
+    founderNames: ["Shekhar Shinde"],
     teamMembers: [
       { name: "Shekhar Shinde", department: "Instrumentation & Control" },
-      { name: "Austin Loyd", department: "E&TC" },
-      { name: "Aayush Joshi", department: "E&TC" },
-      { name: "Priyanshuraj Sharma", department: "E&TC" },
-      { name: "Shravan Bhoyar", department: "E&TC" },
-      { name: "Hemant Pawar", department: "IT" },
     ],
   },
   {
@@ -288,9 +280,9 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "Drone technology and innovation company that self-registered and generated ₹10 Lakhs in revenue.",
-    founderPhotos: [],
+    founderNames: ["Shreyash Vikhe", "Bhargav Patil"],
     teamMembers: [
-      { name: "Shreyash Vikhe", department: "R&A" },
+      { name: "Shreyash Vikhe", department: "Robotics & Automation" },
       { name: "Bhargav Patil", department: "IT" },
     ],
   },
@@ -304,11 +296,10 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "Award-winning startup that secured ₹8.31 Lakhs in angel investor funding through national-level competitions.",
-    founderPhotos: [],
+    founderNames: ["Aryan Surve", "Mansi Ghodekar"],
     teamMembers: [
-      { name: "Vaayu Aryan S", department: "R&A" },
-      { name: "Mansi Ghodekar", department: "R&A" },
-      { name: "Abhishek Nandimath", department: "AI&DS" },
+      { name: "Aryan Surve", department: "Mechanical" },
+      { name: "Mansi Ghodekar", department: "Robotics & Automation" },
     ],
   },
   {
@@ -321,8 +312,9 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "Creative studio focused on unconventional digital content and media production.",
-    founderPhotos: [],
+    founderNames: ["Himanshu Mahajan", "Rudraksh Vajire"],
     teamMembers: [
+      { name: "Himanshu Mahajan", department: "AI&DS" },
       { name: "Rudraksh Vajire", department: "AI&DS" },
     ],
   },
@@ -336,7 +328,7 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "Innovative space-optimization and design venture.",
-    founderPhotos: [],
+    founderNames: ["Harshal Chavan"],
     teamMembers: [
       { name: "Harshal Chavan", department: "AI&DS" },
     ],
@@ -351,7 +343,7 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "A creative technology venture exploring immersive digital experiences.",
-    founderPhotos: [],
+    founderNames: ["Nikhil Sharma", "Shreyas"],
     teamMembers: [
       { name: "Nikhil Sharma", department: "DYPIU" },
       { name: "Shreyas", department: "DYPIU" },
@@ -367,7 +359,7 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description: "A food-tech startup focused on fast delivery and campus dining solutions.",
-    founderPhotos: [],
+    founderNames: ["Krishna Singh", "Pawan Arnati"],
     teamMembers: [
       { name: "Krishna Singh", department: "DYPCOP" },
       { name: "Pawan Arnati", department: "DYPCOP" },

@@ -20,38 +20,19 @@ const FounderDirectory = () => {
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="group grid grid-cols-12 gap-4 items-center py-5 border-b border-border hover:bg-secondary/50 transition-colors duration-300 ease-expo px-2 md:px-4"
             >
-              {/* Founder photo(s) + Name */}
-              <div className="col-span-12 md:col-span-5 flex items-center gap-4">
-                <div className="flex -space-x-2 shrink-0">
-                  {startup.founderPhotos.map((photo, idx) => (
-                    <div
-                      key={idx}
-                      className="w-10 h-10 rounded-full overflow-hidden border-2 border-background bg-muted relative"
-                    >
-                      <img
-                        src={photo}
-                        alt={`${startup.name} founder ${idx + 1}`}
-                        className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          target.style.display = "none";
-                          const fallback = target.nextElementSibling as HTMLElement;
-                          if (fallback) fallback.style.display = "flex";
-                        }}
-                      />
-                      <div className="absolute inset-0 items-center justify-center text-xs font-medium text-muted-foreground bg-muted hidden">
-                        {startup.name.charAt(0)}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <p className="font-medium text-foreground group-hover:text-accent transition-colors duration-300">
-                    {startup.name}
-                  </p>
-                  <p className="font-mono-ui text-muted-foreground">Est. {startup.foundingYear}</p>
-                </div>
+              {/* Founder names + Startup Name */}
+              <div className="col-span-12 md:col-span-5 flex flex-col gap-1">
+                <p className="font-medium text-foreground group-hover:text-accent transition-colors duration-300">
+                  {startup.name}
+                </p>
+                <p className="font-mono-ui text-sm text-muted-foreground">
+                  {startup.founderNames.length > 0
+                    ? startup.founderNames.length <= 2
+                      ? startup.founderNames.join(", ")
+                      : `${startup.founderNames.slice(0, 2).join(", ")} +${startup.founderNames.length - 2} more`
+                    : "—"}
+                </p>
+                <p className="font-mono-ui text-xs text-muted-foreground/60">Est. {startup.foundingYear}</p>
               </div>
 
               <div className="col-span-6 md:col-span-3">
