@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import StartupGrid from "@/components/StartupGrid";
+import IncubationBenefits from "@/components/IncubationBenefits";
 import FounderDirectory from "@/components/FounderDirectory";
 import Footer from "@/components/Footer";
 
@@ -9,6 +10,7 @@ const Index = () => {
     <div className="bg-background min-h-screen">
       <Navbar />
       <Hero />
+      <IncubationBenefits />
       <StartupGrid />
       <FounderDirectory />
       <Footer />
