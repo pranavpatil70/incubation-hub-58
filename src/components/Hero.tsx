@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Active Startups", value: "8" },
-  { label: "Industries", value: "6" },
+  { label: "Active Startups", value: "9" },
+  { label: "Industries", value: "7" },
   { label: "Combined Revenue", value: "₹45L+" },
 ];
 
@@ -30,7 +30,7 @@ const Hero = () => {
           className="mt-10 max-w-2xl"
         >
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Incubating 8 student-led ventures at D.Y. Patil College of Engineering, Akurdi.
+            Incubating 9 student-led ventures at D.Y. Patil College of Engineering, Akurdi.
             From dorm room prototypes to market-ready products.
           </p>
         </motion.div>

@@ -51,6 +51,39 @@ const StartupGrid = () => {
                 {startup.description || startup.achievement}
               </p>
 
+              {/* Founder Photos */}
+              <div className="flex items-center gap-[-8px] mb-6">
+                <div className="flex -space-x-3">
+                  {startup.founderPhotos.map((photo, idx) => (
+                    <div
+                      key={idx}
+                      className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-card group-hover:border-foreground transition-colors duration-500 bg-muted"
+                    >
+                      <img
+                        src={photo}
+                        alt={`${startup.name} co-founder ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          target.style.display = "none";
+                          const fallback = target.nextElementSibling as HTMLElement;
+                          if (fallback) fallback.style.display = "flex";
+                        }}
+                      />
+                      <div
+                        className="absolute inset-0 items-center justify-center text-xs font-medium text-muted-foreground hidden"
+                      >
+                        {startup.name.charAt(0)}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <span className="ml-3 font-mono-ui text-muted-foreground group-hover:text-background/50 transition-colors duration-500">
+                  {startup.founderPhotos.length === 1 ? "Founder" : `${startup.founderPhotos.length} Co-founders`}
+                </span>
+              </div>
+
               <div className="flex items-center gap-4 pt-4 border-t border-border group-hover:border-background/20 transition-colors duration-500">
                 <p className="font-mono-ui text-muted-foreground group-hover:text-background/50 transition-colors duration-500">
                   {startup.email}
