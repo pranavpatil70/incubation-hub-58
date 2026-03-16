@@ -6,6 +6,9 @@ const Navbar = () => {
           DIF
         </a>
         <div className="flex items-center gap-8">
+          <a href="#benefits" className="font-mono-ui text-muted-foreground hover:text-foreground transition-colors duration-300">
+            Benefits
+          </a>
           <a href="#startups" className="font-mono-ui text-muted-foreground hover:text-foreground transition-colors duration-300">
             Startups
           </a>
