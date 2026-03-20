@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Startups Incubated", value: "20" },
-  { label: "Companies Registered", value: "5" },
-  { label: "Institute Funding", value: "₹8.7L+" },
+  { label: "Active Startups", value: "26+" },
+  { label: "Institutional Funding", value: "₹75L+" },
+  { label: "Incubate Revenue (YTD)", value: "₹80L+" },
 ];
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
             DYP Dnyansagar Incubation Foundation
           </p>
           <h1 className="font-season-mix text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground max-w-5xl" style={{ textWrap: "balance" as any }}>
-            The Foundation for What's Next.
+            Scale Bold Ideas Into Real Companies.
           </h1>
         </motion.div>
 
@@ -30,8 +30,9 @@ const Hero = () => {
           className="mt-10 max-w-2xl"
         >
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Incubating 20 student-led ventures at D.Y. Patil College of Engineering, Akurdi.
-            From dorm room prototypes to market-ready products.
+            DYP Dnyansagar Incubation Foundation powers high-growth ventures with
+            dedicated infrastructure, expert mentorship, and strong funding support.
+            From first prototype to market acceleration.
           </p>
         </motion.div>
 

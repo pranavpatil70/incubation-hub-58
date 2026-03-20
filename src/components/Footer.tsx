@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-border px-6 py-16 md:px-12 lg:px-20" id="about">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <h3 className="font-season-mix text-2xl text-foreground mb-4">
               DYP Dnyansagar<br />Incubation Foundation
@@ -14,6 +14,9 @@ const Footer = () => {
           <div>
             <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Links</p>
             <div className="flex flex-col gap-2">
+              <a href="#about-us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About Us</a>
+              <a href="#careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Careers</a>
+              <a href="#latest-achievements" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Latest Achievements</a>
               <a href="#startups" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Startups</a>
               <a href="#founders" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Founders</a>
             </div>
@@ -23,6 +26,16 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">DYP Dnyansagar Incubation Hub</p>
             <p className="text-sm text-muted-foreground">D.Y. Patil College of Engineering</p>
             <p className="text-sm text-muted-foreground">Akurdi, Pune</p>
+          </div>
+          <div>
+            <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Social Connectivity</p>
+            <div className="flex flex-col gap-2">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Instagram</a>
+              <a href="mailto:dif@dypcoeakurdi.ac.in" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Email</a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">X (Twitter)</a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">YouTube</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
+            </div>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-border">
