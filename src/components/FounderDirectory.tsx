@@ -3,14 +3,17 @@ import { startups } from "@/data/startups";
 
 const FounderDirectory = () => {
   return (
-    <section className="px-6 py-24 md:px-12 lg:px-20 border-t border-border" id="founders">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="border-t border-border/70 bg-secondary/10 px-6 py-24 md:px-12 lg:px-20" id="founders">
+      <div className="mx-auto max-w-[1400px]">
         <div className="mb-16">
-          <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Directory</p>
+          <p className="font-mono-ui mb-4 text-primary uppercase tracking-widest">Directory</p>
           <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">Founders</h2>
+          <p className="mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
+            Founder contacts and startup details organized for quick outreach and ecosystem visibility.
+          </p>
         </div>
 
-        <div className="border-t border-border">
+        <div className="overflow-hidden rounded-3xl border border-border/70 bg-card shadow-[0_12px_28px_hsl(var(--foreground)/0.05)]">
           {startups.map((startup, i) => (
             <motion.div
               key={startup.name}
@@ -18,9 +21,8 @@ const FounderDirectory = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group grid grid-cols-12 gap-4 items-center py-5 border-b border-border hover:bg-secondary/50 transition-colors duration-300 ease-expo px-2 md:px-4"
+              className="group grid grid-cols-12 items-center gap-4 border-b border-border/70 px-3 py-5 transition-colors duration-300 ease-expo hover:bg-secondary/40 md:px-5"
             >
-              {/* Founder names + Startup Name */}
               <div className="col-span-12 md:col-span-5 flex flex-col gap-1">
                 <p className="font-medium text-foreground group-hover:text-accent transition-colors duration-300">
                   {startup.name}
@@ -47,7 +49,7 @@ const FounderDirectory = () => {
                     href={startup.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono-ui text-muted-foreground hover:text-accent transition-colors duration-300 underline underline-offset-4"
+                    className="font-mono-ui rounded-full border border-border/70 px-3 py-1 text-muted-foreground transition-colors duration-300 hover:text-accent"
                   >
                     Website
                   </a>
@@ -57,7 +59,7 @@ const FounderDirectory = () => {
                     href={startup.socials[0]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono-ui text-muted-foreground hover:text-accent transition-colors duration-300 underline underline-offset-4"
+                    className="font-mono-ui rounded-full border border-border/70 px-3 py-1 text-muted-foreground transition-colors duration-300 hover:text-accent"
                   >
                     Social
                   </a>

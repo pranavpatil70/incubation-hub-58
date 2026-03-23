@@ -43,37 +43,62 @@ const stats = [
 
 const IncubationBenefits = () => {
   return (
-    <section className="px-6 py-24 md:px-12 lg:px-20 bg-secondary/30" id="benefits">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="bg-secondary/25 px-6 py-24 md:px-12 lg:px-20" id="benefits">
+      <div className="mx-auto max-w-[1400px]">
         <div className="mb-16">
-          <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Why Build Here</p>
-          <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">
-            Built for Builders
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          <p className="font-mono-ui mb-4 text-primary uppercase tracking-widest">Why Build Here</p>
+          <h2 className="font-season-mix text-4xl text-foreground md:text-6xl">Built for Builders</h2>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             The incubation program combines strong infrastructure, strategic mentorship,
             legal support, and a high-trust founder network to help startups move faster.
           </p>
         </div>
 
-        {/* Stats row */}
+        <div className="mb-12 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="group relative overflow-hidden rounded-3xl border border-border/70 bg-muted">
+            <img
+              src="/incubation photos/DSC06900.JPG"
+              alt="Mentors with incubated founders"
+              className="h-[320px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+            <p className="absolute bottom-5 left-5 max-w-sm text-sm font-medium text-white md:text-base">
+              Mentorship and execution support that keeps founders close to real-world feedback loops.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="rounded-3xl border border-border/70 bg-card p-6">
+              <p className="font-mono-ui text-primary uppercase">Founder Support</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Mentors, faculty experts, legal partners, and alumni operators in one connected ecosystem.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-border/70 bg-card p-6">
+              <p className="font-mono-ui text-primary uppercase">Build Velocity</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Labs, infra, and rapid experimentation pipelines designed for startup speed.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-border mb-16"
+          className="mb-14 grid grid-cols-2 gap-3 md:grid-cols-4"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="bg-card p-8 text-center">
-              <p className="font-season-mix text-3xl md:text-4xl text-foreground">{stat.value}</p>
-              <p className="font-mono-ui text-muted-foreground mt-2">{stat.label}</p>
+            <div key={stat.label} className="rounded-2xl border border-border/70 bg-card p-5 text-center md:p-7">
+              <p className="font-season-mix text-3xl text-foreground md:text-4xl">{stat.value}</p>
+              <p className="font-mono-ui mt-2 text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </motion.div>
 
-        {/* Benefits grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-border">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit, i) => (
             <motion.div
               key={benefit.title}
@@ -85,11 +110,11 @@ const IncubationBenefits = () => {
                 delay: i * 0.06,
                 ease: [0.19, 1, 0.22, 1],
               }}
-              className="bg-card p-8 md:p-10"
+              className="rounded-3xl border border-border/70 bg-card p-7 md:p-8"
             >
-              <benefit.icon className="w-6 h-6 text-accent mb-5" strokeWidth={1.5} />
-              <h3 className="text-lg font-semibold text-foreground mb-3">{benefit.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+              <benefit.icon className="mb-5 h-6 w-6 text-accent" strokeWidth={1.5} />
+              <h3 className="mb-3 text-lg font-semibold text-foreground">{benefit.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{benefit.description}</p>
             </motion.div>
           ))}
         </div>

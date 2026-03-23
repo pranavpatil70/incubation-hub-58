@@ -18,20 +18,22 @@ const Navbar = () => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 h-16 flex items-center justify-between gap-4">
-        <Link to="/" className="font-season-mix text-lg text-foreground">
+    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-6 md:px-12 lg:px-20">
+        <Link to="/" className="font-season-mix text-lg text-foreground md:text-xl">
           Dnyansagar Incubation
         </Link>
 
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden items-center gap-2 rounded-full border border-border/70 bg-card/70 p-1 lg:flex">
           {links.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={[
-                "font-mono-ui transition-colors duration-300",
-                isActive(link.path) ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                "font-mono-ui rounded-full px-4 py-2 transition-colors duration-300",
+                isActive(link.path)
+                  ? "bg-primary/12 text-foreground"
+                  : "text-muted-foreground hover:bg-secondary/60 hover:text-foreground",
               ].join(" ")}
             >
               {link.label}
@@ -39,8 +41,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
-          <Button asChild size="sm">
+        <div className="hidden items-center gap-3 md:flex">
+          <Button asChild size="sm" className="rounded-xl">
             <Link to="/careers">Apply for Incubation</Link>
           </Button>
         </div>

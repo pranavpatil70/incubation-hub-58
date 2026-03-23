@@ -4,25 +4,43 @@ import Footer from "@/components/Footer";
 
 const About = () => {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="min-h-screen bg-[radial-gradient(120%_120%_at_15%_0%,hsl(var(--primary)/0.16),transparent_45%),radial-gradient(100%_100%_at_92%_10%,hsl(var(--accent)/0.14),transparent_40%),hsl(var(--background))]">
       <Navbar />
-      <section className="mt-24 px-6 py-24 md:px-12 lg:px-20">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="mt-24 px-6 py-16 md:px-12 lg:px-20 lg:py-20">
+        <div className="mx-auto grid max-w-[1400px] gap-10 rounded-3xl border border-border/70 bg-card/80 p-8 shadow-[0_20px_60px_hsl(var(--foreground)/0.08)] backdrop-blur lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
           >
-            <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">About Us</p>
-            <h2 className="font-season-mix text-4xl md:text-6xl text-foreground mb-6">The Story Behind the Hub</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              This section features the incubation story and leadership voice requested in the meeting,
-              including a dedicated "About Us" video by Nakul Reddy with a keynote bit from the Director.
+            <p className="font-mono-ui mb-4 inline-flex rounded-full bg-primary/10 px-3 py-1 text-primary uppercase tracking-widest">
+              About Us
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Replace the placeholder link below with the final approved video URL when available.
+            <h2 className="font-season-mix mb-5 text-4xl text-foreground md:text-6xl">The Story Behind the Hub</h2>
+            <p className="mb-4 max-w-xl leading-relaxed text-muted-foreground">
+              DYP Dnyansagar Incubation Foundation was created to help ambitious student and early-stage founders
+              transform strong ideas into market-ready ventures.
             </p>
+            <p className="max-w-xl leading-relaxed text-muted-foreground">
+              Our approach combines mentoring, infrastructure, and startup community support so teams can test faster,
+              iterate smarter, and launch with confidence.
+            </p>
+
+            <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl border border-border/70 bg-background/80 p-4">
+                <p className="font-season-mix text-3xl text-foreground">26+</p>
+                <p className="text-xs text-muted-foreground">Active startups</p>
+              </div>
+              <div className="rounded-2xl border border-border/70 bg-background/80 p-4">
+                <p className="font-season-mix text-3xl text-foreground">₹75L+</p>
+                <p className="text-xs text-muted-foreground">Funding support</p>
+              </div>
+              <div className="rounded-2xl border border-border/70 bg-background/80 p-4">
+                <p className="font-season-mix text-3xl text-foreground">25+</p>
+                <p className="text-xs text-muted-foreground">Labs access</p>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -30,19 +48,59 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.08 }}
-            className="border border-border bg-card p-4"
+            className="space-y-4"
           >
-            <div className="aspect-video bg-secondary/60 rounded-sm border border-border flex items-center justify-center">
+            <div className="group relative overflow-hidden rounded-3xl border border-border/70 bg-muted">
+              <img
+                src="/incubation photos/DSC06910.JPG"
+                alt="Incubation leadership and startup interaction"
+                className="h-[320px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <p className="absolute bottom-4 left-4 rounded-xl bg-white/90 px-3 py-2 text-sm font-medium text-foreground">
+                Leadership vision with founder-first execution
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-border/70 bg-card p-5">
+              <p className="font-mono-ui mb-2 text-primary uppercase">Feature Video</p>
+              <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                Watch the official About Us narrative and leadership message. Replace this link with the approved final
+                video URL when ready.
+              </p>
               <a
                 href="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono-ui text-sm uppercase tracking-wider text-foreground hover:text-accent transition-colors"
+                className="inline-flex rounded-xl border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
               >
                 Open About Us Feature Video
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20 md:px-12 lg:px-20">
+        <div className="mx-auto grid max-w-[1400px] gap-4 md:grid-cols-3">
+          <article className="rounded-3xl border border-border/70 bg-card p-6">
+            <p className="font-mono-ui text-primary uppercase">Mission</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Build a high-trust ecosystem where founders can validate fast and grow with practical support.
+            </p>
+          </article>
+          <article className="rounded-3xl border border-border/70 bg-card p-6">
+            <p className="font-mono-ui text-primary uppercase">Model</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Access to mentors, domain experts, infrastructure, and partner networks under one framework.
+            </p>
+          </article>
+          <article className="rounded-3xl border border-border/70 bg-card p-6">
+            <p className="font-mono-ui text-primary uppercase">Outcome</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              From concept to market readiness with measurable traction in funding, product, and revenue.
+            </p>
+          </article>
         </div>
       </section>
       <Footer />
