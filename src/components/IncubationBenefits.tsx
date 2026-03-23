@@ -93,21 +93,6 @@ const IncubationBenefits = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Coordinator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16 pt-8 border-t border-border"
-        >
-          <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-2">Coordinator</p>
-          <p className="text-xl font-semibold text-foreground">Dr. Manish Sharma</p>
-          <p className="text-sm text-muted-foreground mt-1">
-            Institute Innovation and Incubation Coordinator · In-charge, DYPEC Dnyansagar Incubation Hub
-          </p>
-        </motion.div>
       </div>
     </section>
   );

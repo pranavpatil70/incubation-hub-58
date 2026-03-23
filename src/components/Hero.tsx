@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const stats = [
   { label: "Active Startups", value: "26+" },
@@ -16,10 +18,10 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
         >
           <p className="font-mono-ui text-muted-foreground mb-6 uppercase tracking-widest">
-            DYP Dnyansagar Incubation Foundation
+            Scale Bold Ideas Into Real Companies.
           </p>
           <h1 className="font-season-mix text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground max-w-5xl" style={{ textWrap: "balance" as any }}>
-            Scale Bold Ideas Into Real Companies.
+            DYP Dnyansagar Incubation Foundation
           </h1>
         </motion.div>
 
@@ -34,6 +36,12 @@ const Hero = () => {
             dedicated infrastructure, expert mentorship, and strong funding support.
             From first prototype to market acceleration.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild size="lg">
+              <Link to="/careers">Apply for Incubation</Link>
+            </Button>
+          </div>
         </motion.div>
 
         <motion.div

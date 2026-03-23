@@ -4,11 +4,10 @@ import StartupGrid from "@/components/StartupGrid";
 import IncubationBenefits from "@/components/IncubationBenefits";
 import FounderDirectory from "@/components/FounderDirectory";
 import Footer from "@/components/Footer";
-import AboutUsMedia from "@/components/AboutUsMedia";
-import LatestAchievements from "@/components/LatestAchievements";
 import InfrastructureFacilities from "@/components/InfrastructureFacilities";
 import SocialProof from "@/components/SocialProof";
 import Careers from "@/components/Careers";
+import LatestAchievements from "@/components/LatestAchievements";
 
 const Index = () => {
   return (
@@ -18,7 +17,6 @@ const Index = () => {
       <IncubationBenefits />
       <LatestAchievements />
       <InfrastructureFacilities />
-      <AboutUsMedia />
       <SocialProof />
       <Careers />
       <StartupGrid />
