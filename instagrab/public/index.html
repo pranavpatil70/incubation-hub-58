@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagrab - Public Instagram Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="bg-layer"></div>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">IG</div>
+        <div>
+          <h1>Instagrab</h1>
+          <p>Public profile explorer and downloader</p>
+        </div>
+      </div>
+      <button id="themeToggle" class="ghost-btn" type="button">Light mode</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Search any public Instagram profile</h2>
+        <p>Anonymous browsing, preview media live, and download what you need.</p>
+        <form id="searchForm" class="search-form">
+          <input id="usernameInput" name="username" type="text" placeholder="Enter username (e.g. natgeo)" autocomplete="off" required />
+          <button id="searchButton" type="submit">Search</button>
+        </form>
+        <div id="statusArea" class="status status-idle">Ready to search.</div>
+        <div id="historyArea" class="history"></div>
+      </section>
+
+      <section id="profileSection" class="profile-card hidden" aria-live="polite"></section>
+
+      <section id="contentSection" class="content-section hidden">
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="Media tabs">
+            <button class="tab-btn active" data-tab="posts" role="tab" aria-selected="true">Posts</button>
+            <button class="tab-btn" data-tab="videos" role="tab" aria-selected="false">Videos</button>
+            <button class="tab-btn" data-tab="highlights" role="tab" aria-selected="false">Stories/Highlights</button>
+          </div>
+          <div class="bulk-controls">
+            <span id="selectionCount">0 selected</span>
+            <button id="downloadSelected" class="ghost-btn" type="button" disabled>Download selected as ZIP</button>
+          </div>
+        </div>
+        <div id="gridArea" class="media-grid"></div>
+        <div id="paginationBar" class="pagination-bar hidden">
+          <button id="prevPage" class="ghost-btn" type="button">Previous page</button>
+          <span id="pageInfo" class="muted">Page 1 of 1</span>
+          <button id="nextPage" class="ghost-btn" type="button">Next page</button>
+          <button id="loadMoreRemote" class="ghost-btn" type="button">Load more posts</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="mediaModal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button id="closeModal" class="close-btn" aria-label="Close">x</button>
+        <div class="modal-nav">
+          <button id="prevItem" class="ghost-btn" type="button">Previous</button>
+          <button id="nextItem" class="ghost-btn" type="button">Next</button>
+        </div>
+        <div id="modalMediaArea" class="modal-media"></div>
+        <div id="childNav" class="child-nav hidden">
+          <button id="prevChild" class="ghost-btn" type="button">Previous media</button>
+          <span id="childIndexText">1 / 1</span>
+          <button id="nextChild" class="ghost-btn" type="button">Next media</button>
+        </div>
+        <div id="modalMeta" class="modal-meta"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>This tool is for viewing public content only. Respect copyright and Instagram's Terms of Service.</p>
+      <p>No personal credentials are collected. Users are responsible for how downloaded content is used.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
