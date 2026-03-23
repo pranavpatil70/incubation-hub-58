@@ -1,8 +1,28 @@
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { startups } from "@/data/startups";
 import { ExternalLink } from "lucide-react";
 
 const StartupGrid = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const orderedStartups = useMemo(() => {
+    const priorityOrder = ["denivs", "reddy arts media", "warmwrite", "ramaastra"];
+
+    const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+
+    const prioritized = priorityOrder
+      .map((target) => startups.find((startup) => normalize(startup.name).includes(target)))
+      .filter((startup): startup is (typeof startups)[number] => Boolean(startup));
+
+    const prioritizedNames = new Set(prioritized.map((startup) => startup.name));
+    const remaining = startups.filter((startup) => !prioritizedNames.has(startup.name));
+
+    return [...prioritized, ...remaining];
+  }, []);
+
+  const visibleStartups = showAll ? orderedStartups : orderedStartups.slice(0, 4);
+
   return (
     <section className="px-6 py-24 md:px-12 lg:px-20" id="startups">
       <div className="mx-auto max-w-[1400px]">
@@ -15,7 +35,7 @@ const StartupGrid = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {startups.map((startup, i) => (
+          {visibleStartups.map((startup, i) => (
             <motion.div
               key={startup.name}
               initial={{ opacity: 0, y: 20 }}
@@ -76,6 +96,18 @@ const StartupGrid = () => {
             </motion.div>
           ))}
         </div>
+
+        {orderedStartups.length > 4 && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((current) => !current)}
+              className="rounded-xl border border-border/70 bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              {showAll ? "Show Less" : "Explore All"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

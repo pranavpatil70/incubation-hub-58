@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { startups } from "@/data/startups";
 
 const FounderDirectory = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleStartups = showAll ? startups : startups.slice(0, 10);
+
   return (
     <section className="border-t border-border/70 bg-secondary/10 px-6 py-24 md:px-12 lg:px-20" id="founders">
       <div className="mx-auto max-w-[1400px]">
@@ -14,7 +18,7 @@ const FounderDirectory = () => {
         </div>
 
         <div className="overflow-hidden rounded-3xl border border-border/70 bg-card shadow-[0_12px_28px_hsl(var(--foreground)/0.05)]">
-          {startups.map((startup, i) => (
+          {visibleStartups.map((startup, i) => (
             <motion.div
               key={startup.name}
               initial={{ opacity: 0 }}
@@ -68,6 +72,18 @@ const FounderDirectory = () => {
             </motion.div>
           ))}
         </div>
+
+        {startups.length > 10 && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((current) => !current)}
+              className="rounded-xl border border-border/70 bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              {showAll ? "Show Less" : "Explore All"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
