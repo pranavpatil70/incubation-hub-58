@@ -123,23 +123,25 @@ const LatestAchievements = () => {
           <h3 className="font-season-mix text-3xl md:text-4xl text-foreground mb-3">{selected.title}</h3>
           <p className="text-muted-foreground max-w-3xl">{selected.description}</p>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-6 items-end min-h-[220px]">
-            {selected.yearlyData.map((item) => {
-              const height = Math.max(20, Math.round((item.value / maxValue) * 180));
-              return (
-                <div key={item.year} className="flex flex-col items-center">
-                  <div
-                    className="w-full max-w-[90px] bg-accent/20 border border-accent/30 rounded-sm"
-                    style={{ height }}
-                    aria-hidden="true"
-                  />
-                  <p className="font-season-mix text-xl text-foreground mt-3">
-                    {selected.unit === "lakh" ? `Rs. ${item.value}L` : `${item.value}`}
-                  </p>
-                  <p className="text-muted-foreground text-sm">{item.year}</p>
-                </div>
-              );
-            })}
+          <div className="mt-10 overflow-x-auto pb-2">
+            <div className="flex min-w-max items-end gap-6">
+              {selected.yearlyData.map((item) => {
+                const height = Math.max(20, Math.round((item.value / maxValue) * 180));
+                return (
+                  <div key={item.year} className="w-[96px] flex-shrink-0 flex flex-col items-center">
+                    <div
+                      className="w-full bg-accent/20 border border-accent/30 rounded-sm"
+                      style={{ height }}
+                      aria-hidden="true"
+                    />
+                    <p className="font-season-mix text-xl text-foreground mt-3 text-center">
+                      {selected.unit === "lakh" ? `Rs. ${item.value}L` : `${item.value}`}
+                    </p>
+                    <p className="text-muted-foreground text-sm">{item.year}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </motion.div>
       </div>
