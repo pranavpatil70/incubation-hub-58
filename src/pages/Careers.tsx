@@ -67,13 +67,86 @@ const CareersPage = () => {
             ))}
           </div>
 
-          <div className="rounded-3xl border border-border/70 bg-card p-6 md:p-8">
-            <p className="font-mono-ui text-primary uppercase">Application Note</p>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              Share your portfolio, 2-3 relevant projects, and a short note on why you want to contribute to the
-              incubation communication team. Final application link or contact details can be placed here.
-            </p>
-          </div>
+       <div className="rounded-3xl border border-border/70 bg-card p-6 md:p-8 md:flex md:items-center md:justify-between">
+
+  <div>
+    <p className="font-mono-ui text-primary uppercase">
+      Application Note
+    </p>
+
+    <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
+      Share your portfolio, 2-3 relevant projects, and a short note on why you want to contribute to the
+      incubation communication team. Final application link or contact details can be placed here.
+    </p>
+  </div>
+
+  {/* SVG Illustration */}
+<div className="hidden md:flex md:items-center md:justify-center md:min-w-[220px] md:mr-12">
+
+<svg
+  width="220"
+  height="180"
+  viewBox="0 0 200 160"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+
+  className="opacity-95 transition-all duration-500 
+  drop-shadow-[0_12px_30px_rgba(0,0,0,0.08)]
+  hover:drop-shadow-[0_18px_40px_rgba(0,0,0,0.12)]
+  hover:scale-105"
+
+  style={{
+    filter:"drop-shadow(0 0 14px rgba(79,70,229,0.15))"
+  }}
+>
+    <rect
+      x="30"
+      y="20"
+      width="120"
+      height="120"
+      rx="18"
+      className="fill-primary/10 stroke-primary/30"
+      strokeWidth="2"
+    />
+
+    <rect
+      x="55"
+      y="50"
+      width="70"
+      height="8"
+      rx="4"
+      className="fill-primary/40"
+    />
+
+    <rect
+      x="55"
+      y="70"
+      width="55"
+      height="8"
+      rx="4"
+      className="fill-primary/30"
+    />
+
+    <rect
+      x="55"
+      y="90"
+      width="60"
+      height="8"
+      rx="4"
+      className="fill-primary/20"
+    />
+
+    <circle
+      cx="100"
+      cy="30"
+      r="10"
+      className="fill-primary/30"
+    />
+  </svg>
+
+</div>
+
+</div>
         </div>
       </section>
       <Footer />
