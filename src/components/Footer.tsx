@@ -21,14 +21,23 @@ const Footer = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-12 rounded-3xl border border-border/70 bg-card p-8 shadow-[0_14px_32px_hsl(var(--foreground)/0.05)] md:grid-cols-4">
-          <div>
-            <h3 className="font-season-mix text-2xl text-foreground mb-4">
-              DYP Dnyansagar<br />Incubation Foundation
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              D.Y. Patil College of Engineering, Akurdi, Pune, Maharashtra — 411044
-            </p>
-          </div>
+         <div>
+  <div className="flex items-center gap-3 mb-4">
+    <img
+      src="/incubation photos/dyp_logo.png"
+      alt="Dnyansagar Incubation"
+      className="h-[48px] w-[48px] object-contain"
+    />
+
+    <h3 className="font-season-mix text-xl text-foreground leading-tight">
+      DYP Dnyansagar<br/>Incubation Foundation
+    </h3>
+  </div>
+
+  <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
+    D.Y. Patil College of Engineering, Akurdi, Pune, Maharashtra — 411044
+  </p>
+</div>
           <div>
             <p className="font-mono-ui text-primary uppercase tracking-widest mb-4">Links</p>
             <div className="flex flex-col gap-2">

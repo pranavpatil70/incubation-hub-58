@@ -19,10 +19,18 @@ const Navbar = () => {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-6 md:px-12 lg:px-20">
-        <Link to="/" className="font-season-mix text-lg text-foreground md:text-xl">
-          Dnyansagar Incubation
-        </Link>
+<div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-6 md:px-12">
+       <Link to="/" className="flex items-center gap-3">
+  <img 
+    src="/incubation photos/dyp_logo.png"
+    alt="Dnyansagar Incubation"
+    className="h-[52px] w-[52px] object-contain"
+  />
+
+  <span className="font-season-mix text-lg text-foreground md:text-xl">
+    Dnyansagar Incubation
+  </span>
+</Link>
 
         <div className="hidden items-center gap-2 rounded-full border border-border/70 bg-card/70 p-1 lg:flex">
           {links.map((link) => (
