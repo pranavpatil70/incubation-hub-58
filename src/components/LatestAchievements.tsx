@@ -141,11 +141,17 @@ const LatestAchievements = () => {
                 const height = Math.max(18, Math.round((item.value / maxValue) * 150));
                 return (
                   <div key={item.year} className="w-[82px] md:w-[96px] flex-shrink-0 flex flex-col items-center">
-                    <div
-                      className="w-full bg-accent/20 border border-accent/30 rounded-sm"
-                      style={{ height }}
-                      aria-hidden="true"
-                    />
+                  <motion.div
+  className="w-full bg-accent/20 border border-accent/30 rounded-sm"
+  initial={{ height: 0 }}
+  animate={{ height }}
+  transition={{
+    duration: 0.8,
+    ease: "easeOut",
+    delay: selected.yearlyData.indexOf(item) * 0.15
+  }}
+  aria-hidden="true"
+/>
                     <p className="font-season-mix text-lg md:text-xl text-foreground mt-3 text-center">
                       {selected.unit === "lakh" ? `Rs. ${item.value}L` : `${item.value}`}
                     </p>

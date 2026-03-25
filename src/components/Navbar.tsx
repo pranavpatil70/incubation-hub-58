@@ -39,9 +39,9 @@ const Navbar = () => {
               to={link.path}
               className={[
                 "font-mono-ui rounded-full px-4 py-2 transition-colors duration-300",
-                isActive(link.path)
-                  ? "bg-primary/12 text-foreground"
-                  : "text-muted-foreground hover:bg-secondary/60 hover:text-foreground",
+           isActive(link.path)
+  ? "bg-gradient-to-r from-primary/20 to-primary/10 text-primary border border-primary/20 shadow-sm"
+  : "text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
               ].join(" ")}
             >
               {link.label}
