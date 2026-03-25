@@ -93,7 +93,7 @@ const CareersPage = () => {
   className="opacity-95 transition-all duration-500 
   drop-shadow-[0_12px_30px_rgba(0,0,0,0.08)]
   hover:drop-shadow-[0_18px_40px_rgba(0,0,0,0.12)]
-  hover:scale-105"
+  hover:scale-105 animate-[float_7s_ease-in-out_infinite]"
 
   style={{
     filter:"drop-shadow(0 0 14px rgba(79,70,229,0.15))"
