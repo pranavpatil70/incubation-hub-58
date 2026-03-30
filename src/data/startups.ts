@@ -30,7 +30,7 @@ export const startups: Startup[] = [
       "https://x.com/denivs_official",
     ],
     website: "https://denivs.com",
-    founderNames: [],
+    founderNames: ["Harshal Chavan"],
     logo: driveThumb("1HCSMhqkevoTIxxd06z_oYAA-tyKoTF-9"),
   },
   {
@@ -74,7 +74,7 @@ export const startups: Startup[] = [
     phone: "9175509079",
     achievement: "Best Startup Award",
     foundingYear: "2025",
-    socials: [],
+    socials: ["https://www.linkedin.com/company/eqvisor/"],
     website: "https://www.eqvisor.in",
     founderNames: ["Austin Loyd", "Aayush Joshi", "Priyanshuraj Sharma", "Shravan Bhoyar", "Hemant Pawar", "Om Salunkhe", "Sankalp Panchbhai", "Parth Kulkarni", "Anvi Vilayankar", "Sunny Borate"],
     logo: driveThumb("1pNdK5-vVdSBwHrXK1NrTGRScIziMF2bK"),
