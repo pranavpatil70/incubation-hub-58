@@ -97,7 +97,7 @@ export const startups: Startup[] = [
     address: "Pimpri Chinchwad, Pune 411019",
     phone: "9011060514",
     achievement:
-      "SPPU Letter of Intent for incubation · Copyright granted for flagship software · ₹10L initial funding LOI from major hotelier",
+      "SPPU Letter of Intent for incubation · Copyright granted for flagship software · ₹10L initial funding LOI from major hotelier.  12Lakh + revenue generated",
     foundingYear: "2023",
     socials: ["https://www.linkedin.com/company/elenco-corporation/"],
     website: "https://www.elencocorporation.com",
@@ -153,8 +153,8 @@ export const startups: Startup[] = [
     socials: [],
     website: null,
     description:
-      "AI-powered agricultural technology helping farmers with crop monitoring and guidance in their own language.",
-    founderNames: [],
+      "Agribot is an AI-powered, remotely operated and autonomous agricultural robot designed to protect crops from animals while performing real-time soil testing , It uses smart sensors and a camera for threat detection, along with automated soil analysis for better farming decisions.",
+    founderNames: ["Shardul Girase","Hardik Gawade"],
     logo: driveThumb("1yciXQP4yTmwyLYzEeUUbpqdFNbiGEr4S"),
   },
   {
