@@ -233,10 +233,10 @@ export const startups: Startup[] = [
   },
   {
     name: "Inside Labs",
-    email: "—",
+    email: "insidelabsincc@gmail.com",
     address: "D.Y. Patil College of Engineering, Akurdi, Pune",
-    phone: "—",
-    achievement: "Selected for incubation under DYPEC Dnyansagar Incubation Hub",
+    phone: "9324104946",
+    achievement: "Maharastra Innovation challenge winner 23 Captial B symposium runner up" ,
     foundingYear: "2023",
     socials: [],
     website: null,
@@ -245,7 +245,6 @@ export const startups: Startup[] = [
     teamMembers: [
       { name: "Harshal Rudra", department: "Computer" },
       { name: "Pratik Aman", department: "Computer" },
-      { name: "Nishant Kumar", department: "Robotics & Automation" },
     ],
   },
   {
