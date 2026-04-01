@@ -19,7 +19,7 @@ const driveThumb = (id: string) =>
 export const startups: Startup[] = [
   {
     name: "Denivs",
-    email: "denivsofficial@gmail.com",
+    email: "contact@denivs.com",
     address: "D.Y. Patil College of Engineering, Akurdi, Pune 411044",
     phone: "7447318961",
     achievement: "First product is ready and second product is in development",
@@ -278,10 +278,10 @@ export const startups: Startup[] = [
     ],
   },
   {
-    name: "Offbeat Studios",
-    email: "—",
+    name: "Offbit Studios",
+    email: "offbitofficial@gmail.com",
     address: "D.Y. Patil College of Engineering, Akurdi, Pune",
-    phone: "—",
+    phone: "9689123993",
     achievement: "Selected for incubation under DYPEC Dnyansagar Incubation Hub",
     foundingYear: "2023",
     socials: [],
