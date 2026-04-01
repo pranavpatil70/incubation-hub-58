@@ -70,7 +70,7 @@ const Hero = () => {
         >
           <div className="group relative overflow-hidden rounded-3xl border border-border/70 bg-muted sm:col-span-2">
             <img
-              src="/incubation photos/DSC06924.JPG"
+              src="/incubation photos/Whole_Incubation.jpeg"
               alt="Startup founders discussing strategy"
               className="h-[280px] w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-[340px]"
             />
