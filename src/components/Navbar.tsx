@@ -19,18 +19,18 @@ const Navbar = () => {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-<div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-6 md:px-12">
-       <Link to="/" className="flex items-center gap-3">
-  <img 
-    src="/incubation photos/dyp_logo.png"
-    alt="Dnyansagar Incubation"
-    className="h-[52px] w-[52px] object-contain"
-  />
+      <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-6 md:px-12">
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src="/incubation photos/dyp_logo.png"
+            alt="Dnyansagar Incubation"
+            className="h-[52px] w-[52px] object-contain"
+          />
 
-  <span className="font-season-mix text-lg text-foreground md:text-xl">
-    Dnyansagar Incubation
-  </span>
-</Link>
+          <span className="font-season-mix text-lg text-foreground md:text-xl">
+            Dnyansagar Incubation
+          </span>
+        </Link>
 
         <div className="hidden items-center gap-2 rounded-full border border-border/70 bg-card/70 p-1 lg:flex">
           {links.map((link) => (
@@ -39,9 +39,9 @@ const Navbar = () => {
               to={link.path}
               className={[
                 "font-mono-ui rounded-full px-4 py-2 transition-colors duration-300",
-           isActive(link.path)
-  ? "bg-gradient-to-r from-primary/20 to-primary/10 text-primary border border-primary/20 shadow-sm"
-  : "text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
+                isActive(link.path)
+                  ? "bg-gradient-to-r from-primary/20 to-primary/10 text-primary border border-primary/20 shadow-sm"
+                  : "text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
               ].join(" ")}
             >
               {link.label}
@@ -51,7 +51,9 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-3 md:flex">
           <Button asChild size="sm" className="rounded-xl">
-            <Link to="/careers">Apply for Incubation</Link>
+            <a href="https://forms.gle/iJcSREhxe9ymcWXdA" target="_blank" rel="noopener noreferrer">
+              Apply for Incubation
+            </a>
           </Button>
         </div>
 
@@ -84,7 +86,9 @@ const Navbar = () => {
 
             <div className="mt-8 flex flex-col gap-3">
               <Button asChild>
-                <Link to="/careers">Apply for Incubation</Link>
+                <a href="https://forms.gle/iJcSREhxe9ymcWXdA" target="_blank" rel="noopener noreferrer">
+                  Apply for Incubation
+                </a>
               </Button>
             </div>
           </SheetContent>

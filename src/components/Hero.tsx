@@ -39,7 +39,9 @@ const Hero = () => {
 
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-xl">
-                <Link to="/careers">Apply for Incubation</Link>
+                <a href="https://forms.gle/iJcSREhxe9ymcWXdA" target="_blank" rel="noopener noreferrer">
+                  Apply for Incubation
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl bg-background/80">
                 <Link to="/gallery">View Campus Gallery</Link>
