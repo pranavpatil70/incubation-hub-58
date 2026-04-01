@@ -294,21 +294,6 @@ export const startups: Startup[] = [
     ],
   },
   {
-    name: "One Metre Square",
-    email: "—",
-    address: "D.Y. Patil College of Engineering, Akurdi, Pune",
-    phone: "—",
-    achievement: "Selected for incubation under DYPEC Dnyansagar Incubation Hub",
-    foundingYear: "2023",
-    socials: [],
-    website: null,
-    description: "Innovative space-optimization and design venture.",
-    founderNames: ["Harshal Chavan"],
-    teamMembers: [
-      { name: "Harshal Chavan", department: "AI&DS" },
-    ],
-  },
-  {
     name: "Dreamsphere",
     email: "—",
     address: "D.Y. Patil College of Engineering, Akurdi, Pune",
