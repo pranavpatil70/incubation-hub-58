@@ -274,7 +274,7 @@ export const startups: Startup[] = [
   description: "Award-winning startup that secured ₹8.31 Lakhs in angel investor funding through national-level competitions.",    founderNames: ["Aryan Surve", "Mansi Ghodekar"],
     teamMembers: [
       { name: "Aryan Surve", department: "Mechanical" },
-      { name: "Mansi Ghodekar", department: "Robotics & Automation" },
+      // { name: "Mansi Ghodekar", department: "Robotics & Automation" },
     ],
   },
   {
