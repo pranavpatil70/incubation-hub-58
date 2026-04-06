@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
     {
-        name: "Dr. Amit Vikram",
+        name: "Rear Admiral Amit Vikram(Retd)",
         role: "Director",
         image: "/incubation photos/Director.jpeg",
     },
      {
-        name: "Tejas Patil",
+        name: "Hon. Mr. Tejas Satej Patil",
         role: "Director",
         image: "/incubation photos/Tejas_patil.png",
     },
    
     {
-        name: "Dr Dhanashree Patil",
+        name: "Dhanashree Patil",
         role: "Director",
         image: "/incubation photos/DSC069111.JPG",
     },
