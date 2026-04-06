@@ -1,4 +1,6 @@
 import { BriefcaseBusiness, Clapperboard } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const roles = [
   {
@@ -36,6 +38,12 @@ const Careers = () => {
               <p className="font-mono-ui text-sm uppercase tracking-widest text-muted-foreground mt-5">{role.openings}</p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-8">
+          <Button asChild size="lg" className="rounded-xl">
+            <Link to="/careers">View Careers Page</Link>
+          </Button>
         </div>
       </div>
     </section>

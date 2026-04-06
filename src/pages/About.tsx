@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TeamSection from "@/components/TeamSection";
 
 const About = () => {
   return (
@@ -119,6 +120,8 @@ const About = () => {
         </div>
 
       </section>
+
+      <TeamSection />
 
       <section className="px-6 pb-20 md:px-12 lg:px-20">
 

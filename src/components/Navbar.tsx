@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const links = [
+  { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
   { label: "Careers", path: "/careers" },
   { label: "Testimonials", path: "/testimonials" },

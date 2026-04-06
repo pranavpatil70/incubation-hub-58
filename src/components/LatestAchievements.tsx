@@ -88,10 +88,10 @@ const LatestAchievements = () => {
     <section className="px-6 py-24 md:px-12 lg:px-20" id="latest-achievements">
       <div className="max-w-[1400px] mx-auto">
         <div className="mb-8 md:mb-12">
-          <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Latest Achievements</p>
-          <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">Interactive Impact Dashboard</h2>
+          <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Overview</p>
+          <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">Latest Achivements</h2>
           <p className="mt-4 text-base md:mt-6 md:text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Click each info tile to view a detailed graphical breakdown of incubation performance.
+            Interactive Impact Dashboard
           </p>
         </div>
 

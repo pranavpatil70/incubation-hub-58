@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 const teamMembers = [
     {
         name: "Dr. Amit Vikram",
-        role: "Incubation Director",
+        role: "Director",
         image: "/incubation photos/Director.jpeg",
     },
      {
         name: "Tejas Patil",
-        role: "Trustee",
+        role: "Director",
         image: "/incubation photos/Tejas_patil.png",
     },
    
     {
         name: "Dr Dhanashree Patil",
-        role: "Assistant Coordinator",
+        role: "Director",
         image: "/incubation photos/DSC069111.JPG",
     },
      {
         name: "Dr Manish Sharma",
-        role: "Lead Coordinator",
+        role: "Director",
         image: "/incubation photos/Manish_Sharma.webp",
     },
 ];
@@ -35,8 +35,8 @@ const TeamSection = () => {
                     transition={{ duration: 0.5 }}
                     className="mb-16"
                 >
-                    <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Our Leadership</p>
-                    <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">Meet Our Team</h2>
+                    <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Leadership</p>
+                    <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">Directors</h2>
                     <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                         The visionary leaders and dedicated experts driving innovation and supporting our startup ecosystem.
                     </p>

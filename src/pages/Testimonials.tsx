@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SocialProof from "@/components/SocialProof";
 
 const getYouTubeVideoId = (value: string) => {
   const input = value.trim();
@@ -133,6 +134,7 @@ const Testimonials = () => {
           </motion.div>
         </div>
       </section>
+      <SocialProof />
       <Footer />
     </div>
   );

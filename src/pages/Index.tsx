@@ -3,10 +3,8 @@ import Hero from "@/components/Hero";
 import StartupGrid from "@/components/StartupGrid";
 import IncubationBenefits from "@/components/IncubationBenefits";
 import FounderDirectory from "@/components/FounderDirectory";
-import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 import InfrastructureFacilities from "@/components/InfrastructureFacilities";
-import SocialProof from "@/components/SocialProof";
 import Careers from "@/components/Careers";
 import LatestAchievements from "@/components/LatestAchievements";
 
@@ -16,10 +14,8 @@ const Index = () => {
       <Navbar />
       <Hero />
       <IncubationBenefits />
-      <TeamSection />
       <LatestAchievements />
       <InfrastructureFacilities />
-      <SocialProof />
       <Careers />
       <StartupGrid />
       <FounderDirectory />
