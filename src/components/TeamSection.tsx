@@ -7,7 +7,7 @@ const teamMembers = [
         image: "/incubation photos/Tejas_patil.png",
     },
     {
-        name: "Hon. Ms. Devshree Satej Patil",
+        name: "Hon. Ms. Devashree Satej Patil",
         role: "Director",
         image: "/incubation photos/DSC069111.JPG",
     },
