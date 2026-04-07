@@ -28,13 +28,13 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-[radial-gradient(100%_100%_at_20%_0%,hsl(var(--primary)/0.18),transparent_45%),radial-gradient(100%_100%_at_90%_10%,hsl(var(--accent)/0.18),transparent_40%),hsl(var(--background))]">
       <Navbar />
-      <section className="mt-24 px-6 py-12 md:px-12 lg:px-20">
-        <div className="mx-auto grid max-w-[1400px] items-center gap-10 rounded-3xl border border-border/60 bg-card/80 p-8 shadow-[0_20px_60px_hsl(var(--foreground)/0.08)] backdrop-blur md:p-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="mt-24 px-4 py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20">
+        <div className="mx-auto grid max-w-[1400px] items-center gap-10 rounded-3xl border border-border/60 bg-card/80 p-5 shadow-[0_20px_60px_hsl(var(--foreground)/0.08)] backdrop-blur sm:p-6 md:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
           <div>
             <p className="font-mono-ui mb-4 inline-flex rounded-full bg-primary/10 px-3 py-1 text-primary uppercase tracking-widest">
               Incubation Hub Gallery
             </p>
-            <h1 className="font-season-mix text-5xl leading-[0.95] text-foreground md:text-6xl">
+            <h1 className="font-season-mix text-4xl leading-[0.95] text-foreground sm:text-5xl md:text-6xl">
               Built for Founders,
               <br />
               Designed for Momentum.
@@ -68,7 +68,7 @@ const Gallery = () => {
             <img
               src={`/incubation photos/${featuredItem.image}`}
               alt={featuredItem.title}
-              className="h-[420px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+               className="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 sm:h-[380px] lg:h-[420px]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-0 p-6">
@@ -80,7 +80,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <section className="px-6 pb-16 md:px-12 lg:px-20 lg:pb-24">
+      <section className="px-4 pb-14 sm:px-6 md:px-10 lg:px-16 lg:pb-24 xl:px-20">
         <div className="mx-auto max-w-[1400px]">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
