@@ -88,8 +88,8 @@ const StartupGrid = () => {
                 </div>
               )}
 
-              <div className="flex items-center gap-4 border-t border-border pt-4">
-                <p className="font-mono-ui text-muted-foreground">
+              <div className="flex items-center gap-4 border-t border-border pt-4 min-w-0">
+                <p className="font-mono-ui text-muted-foreground break-words">
                   {startup.email}
                 </p>
               </div>
