@@ -22,14 +22,14 @@ const CareersPage = () => {
   return (
     <div className="min-h-screen bg-[radial-gradient(120%_120%_at_10%_0%,hsl(var(--primary)/0.15),transparent_45%),radial-gradient(110%_110%_at_90%_8%,hsl(var(--accent)/0.14),transparent_42%),hsl(var(--background))]">
       <Navbar />
-      <section className="mt-24 bg-secondary/10 px-6 py-16 md:px-12 lg:px-20 lg:py-20">
+      <section className="mt-24 bg-secondary/10 px-4 py-12 sm:px-6 md:px-10 lg:px-16 lg:py-20 xl:px-20">
         <div className="mx-auto max-w-[1400px]">
-          <div className="mb-10 grid gap-6 rounded-3xl border border-border/70 bg-card/85 p-8 shadow-[0_18px_45px_hsl(var(--foreground)/0.07)] backdrop-blur lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="mb-10 grid gap-6 rounded-3xl border border-border/70 bg-card/85 p-5 shadow-[0_18px_45px_hsl(var(--foreground)/0.07)] backdrop-blur sm:p-6 md:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
               <p className="font-mono-ui mb-4 inline-flex rounded-full bg-primary/10 px-3 py-1 text-primary uppercase tracking-widest">
                 Careers
               </p>
-              <h2 className="font-season-mix text-4xl text-foreground md:text-6xl">Internship Opportunities</h2>
+              <h2 className="font-season-mix text-3xl text-foreground sm:text-4xl md:text-6xl">Internship Opportunities</h2>
               <p className="mt-5 max-w-3xl text-base text-muted-foreground md:text-lg">
                 To support the digital rollout, the incubation communication team is hiring the following interns.
               </p>
@@ -55,7 +55,7 @@ const CareersPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="rounded-3xl border border-border/70 bg-card p-8"
+                className="rounded-3xl border border-border/70 bg-card p-6 md:p-8"
               >
                 <role.icon className="mb-4 h-6 w-6 text-accent" strokeWidth={1.6} />
                 <h3 className="mb-2 text-2xl font-semibold text-foreground">{role.title}</h3>
@@ -67,7 +67,7 @@ const CareersPage = () => {
             ))}
           </div>
 
-       <div className="rounded-3xl border border-border/70 bg-card p-6 md:p-8 md:flex md:items-center md:justify-between">
+        <div className="rounded-3xl border border-border/70 bg-card p-5 sm:p-6 md:flex md:items-center md:justify-between md:p-8">
 
   <div>
     <p className="font-mono-ui text-primary uppercase">
@@ -81,7 +81,7 @@ const CareersPage = () => {
   </div>
 
   {/* SVG Illustration */}
-<div className="hidden md:flex md:items-center md:justify-center md:min-w-[220px] md:mr-12">
+<div className="hidden md:flex md:items-center md:justify-center md:ml-6 md:min-w-[180px] lg:ml-10 lg:min-w-[220px]">
 
 <svg
   width="220"
