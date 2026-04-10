@@ -271,10 +271,10 @@ export const startups: Startup[] = [
     foundingYear: "2023",
     socials: [],
     website: null,
-  description: "Award-winning startup that secured ₹8.31 Lakhs in angel investor funding through national-level competitions.",    founderNames: ["Aryan Surve", "Mansi Ghodekar"],
+    description: "Award-winning startup that secured ₹8.31 Lakhs in angel investor funding through national-level competitions.",
+    founderNames: ["Aryan Surve"],
     teamMembers: [
       { name: "Aryan Surve", department: "Mechanical" },
-      // { name: "Mansi Ghodekar", department: "Robotics & Automation" },
     ],
   },
   {
