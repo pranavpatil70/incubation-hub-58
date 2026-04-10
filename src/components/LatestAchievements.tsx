@@ -89,7 +89,7 @@ const LatestAchievements = () => {
       <div className="max-w-[1400px] mx-auto">
         <div className="mb-8 md:mb-12">
           <p className="font-mono-ui text-muted-foreground uppercase tracking-widest mb-4">Overview</p>
-          <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">Latest Achivements</h2>
+          <h2 className="font-season-mix text-4xl md:text-6xl text-foreground">Latest Achievements</h2>
           <p className="mt-4 text-base md:mt-6 md:text-lg text-muted-foreground max-w-3xl leading-relaxed">
             Interactive Impact Dashboard
           </p>

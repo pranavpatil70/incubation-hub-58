@@ -66,13 +66,13 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen bg-[radial-gradient(120%_120%_at_12%_0%,hsl(var(--primary)/0.14),transparent_42%),radial-gradient(120%_120%_at_90%_8%,hsl(var(--accent)/0.12),transparent_42%),hsl(var(--background))]">
       <Navbar />
-      <section className="mt-24 px-6 py-16 md:px-12 lg:px-20 lg:py-20">
+      <section className="mt-24 px-4 py-12 sm:px-6 md:px-10 lg:px-16 lg:py-20 xl:px-20">
         <div className="mx-auto max-w-[1400px]">
-          <div className="mb-10 rounded-3xl border border-border/70 bg-card/85 p-8 text-center shadow-[0_18px_45px_hsl(var(--foreground)/0.07)] backdrop-blur md:p-10">
+          <div className="mb-10 rounded-3xl border border-border/70 bg-card/85 p-5 text-center shadow-[0_18px_45px_hsl(var(--foreground)/0.07)] backdrop-blur sm:p-6 md:p-10">
             <p className="font-mono-ui mb-4 inline-flex rounded-full bg-primary/10 px-3 py-1 text-primary uppercase tracking-widest">
               Testimonials
             </p>
-            <h2 className="font-season-mix mb-4 text-4xl text-foreground md:text-6xl">Founder Experiences</h2>
+            <h2 className="font-season-mix mb-4 text-3xl text-foreground sm:text-4xl md:text-6xl">Founder Experiences</h2>
             <p className="mx-auto max-w-3xl text-base text-muted-foreground md:text-lg">
               Hear directly from our startup founders about their journey with the DYPEC Dnyansagar Incubation Hub.
             </p>
@@ -126,7 +126,7 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mt-14 rounded-3xl border border-border/70 bg-card p-6 text-center"
+            className="mt-14 rounded-3xl border border-border/70 bg-card p-5 text-center sm:p-6"
           >
             <p className="mx-auto max-w-2xl text-muted-foreground">
               More founder testimonials coming soon! These videos will showcase real experiences from our startup ecosystem.
