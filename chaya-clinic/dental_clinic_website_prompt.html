@@ -1,0 +1,376 @@
+
+<style>
+  body { margin: 0; }
+  .wrap { padding: 1.5rem 0; font-family: var(--font-sans); }
+  .section { margin-bottom: 2rem; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 0.5rem;
+  }
+  .prompt-box {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem 1.5rem;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--color-text-primary);
+    white-space: pre-wrap;
+    word-break: break-word;
+    position: relative;
+  }
+  .copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: var(--border-radius-md);
+    border: 0.5px solid var(--color-border-secondary);
+    background: var(--color-background-primary);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .copy-btn:hover { background: var(--color-background-tertiary); }
+  h3 { font-size: 15px; font-weight: 500; margin: 0 0 0.4rem; color: var(--color-text-primary); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 99px; background: #E6F1FB; color: #0C447C; margin: 2px 3px 2px 0; font-weight: 500; }
+</style>
+<div class="wrap">
+
+  <div class="section">
+    <div class="section-label">Tags / use with</div>
+    <span class="tag">Lovable</span>
+    <span class="tag">v0.dev</span>
+    <span class="tag">Cursor</span>
+    <span class="tag">Bolt.new</span>
+    <span class="tag">Next.js / React</span>
+    <span class="tag">Tailwind CSS</span>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Full prompt — copy everything below</div>
+    <div class="prompt-box" id="promptText">Build a complete, production-ready dental clinic website. Use the following specifications exactly.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DESIGN SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Primary color: Sky Blue (#38BDF8 / Tailwind sky-400)
+Secondary accent: Soft White (#F8FAFC)
+Supporting neutral: Slate (#1E293B) for headings and dark text
+Call-to-action buttons: Deep Sky Blue (#0EA5E9) with white text
+Background: White (#FFFFFF) and very light sky-50 (#F0F9FF) for section alternation
+Highlight/badge color: Mint Green (#D1FAE5) for trust badges and positive accents
+
+Typography:
+  - Headings: Inter or Plus Jakarta Sans, 700 weight
+  - Body: Inter, 400 weight, 16px base
+  - CTA text: 500 weight, white on sky-blue
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MOBILE FIRST RULES (strictly enforced)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- All layouts must be built mobile-first using Tailwind (sm: → md: → lg:)
+- Hamburger menu on mobile, full nav on desktop
+- Sticky header on all screen sizes
+- Font sizes scale: 14px mobile → 16px desktop for body, 28px → 48px for hero headline
+- Touch targets minimum 48×48px for all buttons and links
+- Call and WhatsApp buttons must be full-width on mobile, inline on desktop
+- Appointment form fields stack vertically on mobile, grid on desktop
+- All card grids: 1 column on mobile, 2 on tablet, 3 or 4 on desktop
+- Images use aspect-ratio and object-cover to never break layout on any screen
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FLOATING STICKY BUTTONS (always visible)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Bottom-right corner floating action stack:
+  1. WhatsApp button — round, green (#25D366), WhatsApp SVG icon, tooltip "Chat with us", links to: https://wa.me/YOUR_NUMBER?text=Hi%2C+I'd+like+to+book+an+appointment
+  2. Phone/Call button — round, sky-blue, phone SVG icon, tooltip "Call us now", links to: tel:+YOUR_NUMBER
+
+On mobile: these two buttons sit at the bottom center, full-width pill buttons with icons and labels "WhatsApp Us" and "Call Now". They are always visible above all content.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXIT-INTENT / SCROLL POPUP (fires fast)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Trigger: fires when user scrolls down just 200px (not halfway, not on exit — immediately at 200px scroll depth). Only shows once per session using sessionStorage.
+
+Popup design:
+  - Centered modal with semi-transparent dark overlay
+  - Title: "Get Your Free Smile Checkup Today! 😊"
+  - Subtitle: "Limited slots available this week. Book in 60 seconds."
+  - Single input: mobile number or name
+  - CTA button: "Book My Free Appointment →" (sky-blue)
+  - Close X button top-right
+  - Must work perfectly on mobile (full width modal, large tap targets)
+  - Smooth fade-in animation (150ms)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: STICKY NAVIGATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Logo left (clinic name + tooth SVG icon in sky-blue)
+- Nav links: Home | Services | About Doctor | Reviews | Contact
+- Right side: "Book Appointment" CTA button (sky-blue, rounded-full)
+- On scroll: nav adds white background + soft box-shadow
+- Mobile: hamburger icon opens full-screen slide-down menu
+- Phone number visible in nav on desktop (click to call)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: HERO SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Layout: Two column on desktop (text left, image right), stacked on mobile.
+
+LEFT SIDE — TEXT CONTENT:
+  - Small badge: "⭐ Trusted by 5000+ Patients"
+  - H1: "Your Perfect Smile Starts Here"
+  - Subheading: "Compassionate, modern dental care for the whole family — in a clinic you'll actually love visiting."
+  - Trust row: ✓ 15+ Years Experience  ✓ Pain-Free Treatment  ✓ NABH Certified
+  - BIG CTA BUTTON: "Book an Appointment Now →" — full width on mobile, large pill button on desktop, sky-blue with white text, slight bounce/pulse animation to draw attention
+  - Secondary link below button: "Or call us: +91-XXXXXXXXXX"
+
+RIGHT SIDE — VISUAL COMPONENTS (these are the hero components as requested):
+  - DOCTOR CARD: Professional headshot image of doctor (use a royalty-free professional doctor photo from Unsplash: https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400), name "Dr. [Name]", designation "MDS – Orthodontist & Cosmetic Dentist", 3 star icons + "500+ smiles transformed"
+  - CLINIC CARD below or overlapping doctor card: Clinic exterior/interior photo (use https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400), clinic name, tag "Modern Equipment · Sterile Environment · ISO Certified"
+  - These two cards must be visually prominent — use sky-blue borders, soft shadows, rounded-2xl corners
+  - Background of hero: very light sky-50 gradient or a subtle tooth/medical pattern in sky-100
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: TRUST BAR / STATS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Horizontal scrolling on mobile, 4-column grid on desktop.
+Stats cards:
+  - 5000+ Happy Patients
+  - 15+ Years Experience
+  - 4.9★ Google Rating
+  - 98% Pain-Free Success Rate
+Each card: number in sky-blue bold, label in slate, white card with sky-blue left border
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: SERVICES GRID (with images)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Section title: "Our Dental Services"
+Subtitle: "Comprehensive care for every smile, at every age"
+
+Build a responsive card grid: 1 col mobile, 2 tablet, 3 desktop.
+
+Each card has:
+  - Real image from Unsplash at the top (use exact URLs below)
+  - Service name (bold, 16px)
+  - 1-line description
+  - "Book Now →" link in sky-blue
+  - Hover: slight scale(1.02) and sky-blue border
+
+Services list with image URLs:
+1. Teeth Cleaning & Whitening
+   Image: https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400
+   Desc: Remove stains, tartar, and brighten your natural smile.
+
+2. Dental Implants
+   Image: https://images.unsplash.com/photo-1588776814546-1ffbb47ff5bf?w=400
+   Desc: Permanent tooth replacement that looks and feels real.
+
+3. Braces & Aligners (Orthodontics)
+   Image: https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400
+   Desc: Metal braces, ceramic braces, and clear aligner options.
+
+4. Root Canal Treatment
+   Image: https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400
+   Desc: Pain-free RCT with advanced rotary equipment.
+
+5. Cosmetic Dentistry
+   Image: https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400
+   Desc: Veneers, bonding, smile makeovers — your dream smile awaits.
+
+6. Pediatric Dentistry
+   Image: https://images.unsplash.com/photo-1588776814546-ec5b4537f4b8?w=400
+   Desc: Gentle, fun dental care designed especially for children.
+
+7. Dentures & Crowns
+   Image: https://images.unsplash.com/photo-1571772996211-2f02974562ce?w=400
+   Desc: Custom-fitted crowns, bridges, and removable dentures.
+
+8. Gum Disease Treatment
+   Image: https://images.unsplash.com/photo-1576671081837-49000212a370?w=400
+   Desc: Deep cleaning, scaling, and periodontal therapy.
+
+9. Dental X-Ray & Diagnostics
+   Image: https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400
+   Desc: Digital X-rays with 90% less radiation for accurate diagnosis.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: APPOINTMENT BOOKING SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Split layout on desktop (form left, calendar right). Single column on mobile.
+
+LEFT — PATIENT FORM:
+  Fields:
+    - Full Name (text input)
+    - Mobile Number (tel input, required)
+    - Email Address (email input)
+    - Service Required (dropdown: all 9 services listed above)
+    - Preferred Doctor (if multiple doctors available)
+    - Message / Special Notes (textarea, optional)
+  Submit button: "Confirm My Appointment →" (full-width, sky-blue)
+  Below button: "🔒 Your data is private and secure"
+
+RIGHT — GOOGLE CALENDAR BOOKING WIDGET:
+  Embed a Google Calendar appointment scheduling page using an iframe.
+  Use this embed pattern:
+  <iframe src="https://calendar.google.com/calendar/appointments/schedules/YOUR_SCHEDULE_ID" style="border:0;width:100%;height:600px;" frameborder="0"></iframe>
+  
+  Add instructional text above: "Pick a date and time that works for you"
+  Show available slots in real time via Google Calendar scheduling.
+  
+  ADMIN SIDE (document this for the clinic owner):
+    - Go to Google Calendar → Create → Appointment Schedule
+    - Set available hours (e.g., Mon–Sat, 9am–7pm)
+    - Add buffer time between appointments (15 min)
+    - Set max booking advance (30 days)
+    - Enable automatic confirmation email + reminder (24h before)
+    - Replace YOUR_SCHEDULE_ID with the generated embed URL
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: ABOUT THE DOCTOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Two columns: photo left, content right. Stack on mobile.
+Photo: Use https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500 in a rounded-2xl card with sky-blue border.
+
+Content:
+  - "Meet Dr. [Name]" heading
+  - Specialty badges: MDS · BDS · Orthodontist · Cosmetic Dentist
+  - Paragraph bio (2–3 lines placeholder text)
+  - Education timeline:
+      ✓ BDS — [University], [Year]
+      ✓ MDS Orthodontics — [University], [Year]
+      ✓ Fellowship – [Institute], [Year]
+  - Achievements: 500+ implants, 1000+ smile corrections, 200+ satisfied children
+  - Quote block: "I believe every patient deserves a pain-free, comfortable experience." — Dr. [Name]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7: GOOGLE REVIEWS (latest, positive only)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Section title: "What Our Patients Are Saying"
+Badge: "4.9 ★ on Google — 200+ Reviews"
+
+Display 6 review cards in a 3-column desktop / 1-column mobile grid (or horizontal auto-scroll carousel on mobile).
+
+Each review card:
+  - Google logo icon (SVG, small, top-right)
+  - Patient initials avatar (sky-blue circle)
+  - Patient first name only (e.g., "Priya S.")
+  - Star rating (5 gold stars)
+  - Review text (2–3 sentences max, truncated with "...read more")
+  - Date (e.g., "2 weeks ago")
+  - "Verified Google Review" badge in mint green
+
+USE PLACEHOLDER REVIEW DATA for now. Add note in code comments:
+  // TODO: Replace with Google Places API (Place ID: YOUR_PLACE_ID)
+  // GET https://maps.googleapis.com/maps/api/place/details/json?place_id=YOUR_PLACE_ID&fields=reviews&key=YOUR_KEY
+  // Filter: only show reviews with rating >= 4
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8: FIND US (MAP + CONTACT)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Two columns desktop, stacked mobile.
+
+LEFT — GOOGLE MAPS EMBED:
+  Use: <iframe src="https://maps.google.com/maps?q=YOUR_CLINIC_ADDRESS&output=embed" width="100%" height="400" style="border:0;border-radius:16px;" allowfullscreen></iframe>
+  Below map: "Get Directions →" button that opens Google Maps in new tab: https://maps.google.com/?q=YOUR_CLINIC_ADDRESS
+
+RIGHT — CONTACT DETAILS:
+  - Full clinic address with pin icon
+  - Phone: +91-XXXXXXXXXX (click to call)
+  - WhatsApp: +91-XXXXXXXXXX (click to open WhatsApp)
+  - Email: clinic@email.com (click to compose)
+  - Working Hours table:
+      Mon–Sat: 9:00 AM – 8:00 PM
+      Sunday: 10:00 AM – 2:00 PM (Emergency only)
+  - "Book Appointment" sky-blue button
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 9: SOCIAL MEDIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Section title: "Follow Us For Daily Smile Tips"
+
+Display official social handles in a row of icon+handle cards:
+
+  - Instagram: @[clinic_handle] → links to https://instagram.com/[handle]
+  - Facebook: [Clinic Name] → links to https://facebook.com/[page]
+  - YouTube: [Clinic Name] → links to https://youtube.com/@[handle]
+  - WhatsApp: +91-XXXXXXXXXX → wa.me link
+  - Google Business: "Leave us a review" → Google Maps review link
+
+Each platform card: brand color icon, handle text, follow/visit button.
+Add an Instagram-style image grid below showing 6 placeholder clinic/treatment images.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 10: FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4 column desktop, 2 column tablet, 1 column mobile.
+Columns: Logo+Tagline | Services | Quick Links | Contact+Socials
+Bottom bar: "© 2025 [Clinic Name]. All rights reserved." | Privacy Policy | Terms
+Footer background: Slate-900 (#0F172A), text white/gray-400
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TECH STACK & IMPLEMENTATION NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Framework: Next.js 14 (App Router) or plain React + Vite
+- Styling: Tailwind CSS (mobile-first, sky color palette)
+- Animations: Framer Motion for popup, hero entrance, card hover
+- Icons: Lucide React or Heroicons
+- Image optimization: next/image with lazy loading
+- Form handling: React Hook Form + Zod validation
+- Scroll detection for popup: useEffect + window.addEventListener('scroll', ...)
+- sessionStorage key: "appointmentPopupShown" → set to "true" after first display
+- Google Calendar: iframe embed (no API key needed for scheduling page)
+- Google Maps: iframe embed (no API key needed for basic embed)
+- Google Reviews: Google Places API (requires API key — add .env placeholder)
+- WhatsApp link format: https://wa.me/91XXXXXXXXXX?text=Hi%2C+I+want+to+book+an+appointment
+- All placeholder images use Unsplash URLs provided above (no API key needed)
+- SEO: Add meta title, description, og:image for the clinic
+- Performance: lazy load all images, minimize JS bundle
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PLACEHOLDERS TO REPLACE BEFORE LAUNCH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Search for these strings and replace with real values:
+  YOUR_NUMBER → clinic WhatsApp/phone number
+  YOUR_CLINIC_ADDRESS → full address
+  YOUR_SCHEDULE_ID → Google Calendar appointment schedule ID
+  YOUR_PLACE_ID → Google Business Place ID (from Google Maps URL)
+  YOUR_KEY → Google Places API key
+  [Clinic Name] → actual clinic name
+  [Name] → doctor's full name
+  [handle] → Instagram/Facebook/YouTube handle
+  clinic@email.com → real email address
+
+Build the complete site now. Use the exact color system, section order, Unsplash image URLs, and mobile-first breakpoints described above. Add smooth scroll, a loading skeleton for the reviews section, and aria-labels on all interactive elements for accessibility.</div>
+    <button class="copy-btn" onclick="
+      const text = document.getElementById('promptText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        this.textContent = 'Copied!';
+        setTimeout(() => this.textContent = 'Copy', 2000);
+      });
+    ">Copy</button>
+  </div>
+
+</div>
