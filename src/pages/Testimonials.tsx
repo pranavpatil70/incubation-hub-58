@@ -7,25 +7,25 @@ import SocialProof from "@/components/SocialProof";
 const testimonials = [
   {
     id: 1,
-    title: "Founder Story 1",
+    // title: "Founder Story 1",
     instagram: "https://www.instagram.com/p/DX3gvqNpNeu/embed",
     founder: "Denivs",
   },
   {
     id: 2,
-    title: "Founder Story 2",
+    // title: "Founder Story 2",
     instagram: "https://www.instagram.com/p/DYNOSsJghEP/embed",
-    founder: "Founder Coming Soon",
+    founder: "Trinetra Aerospace Technologies",
   },
   {
     id: 3,
-    title: "Founder Story 3",
+    // title: "Founder Story 3",
     instagram: "https://www.instagram.com/p/DXW212uJy5v/embed",
-    founder: "RamaAstra",
+    founder: "Ramaastra Aerospace & Defence",
   },
   {
     id: 4,
-    title: "Founder Story 4",
+    // title: "Founder Story 4",
     instagram: "https://www.instagram.com/p/DXPaggOJYPM/embed",
     founder: "EQvisor",
   },
@@ -115,7 +115,7 @@ const Testimonials = () => {
                   >
                     <iframe
                       src={testimonial.instagram}
-                      title={`${testimonial.title} video`}
+                      // title={`${testimonial.title} video`}
                       allowTransparency={true}
                       allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
                       loading="lazy"
@@ -127,7 +127,7 @@ const Testimonials = () => {
 
                 <div className="p-6">
                   <h3 className="font-season-mix mb-2 text-2xl text-foreground">
-                    {testimonial.title}
+                    {/* {testimonial.title} */}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {testimonial.founder}
